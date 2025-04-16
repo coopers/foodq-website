@@ -2,43 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FoodQ</title>
+    <title>FoodQ - Where to Eat? What to Order?</title>
+    <link rel="icon" href="logo.png">
     <style>
         body { 
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #000; 
+            color: #FFF; 
+            margin: 0; 
+            padding: 0 10px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
             text-align: center;
-            padding-top: 50px; 
-            background-color: #000; /* black background */
-            color: #FFF; /* white text */
         }
+
+        .container {
+            max-width: 900px; /* wider layout */
+            padding: 20px;
+        }
+
         img { 
-            max-width: 200px; 
-            margin-bottom: 20px; 
+            max-width: 300px; /* significantly larger logo */
+            margin-bottom: 40px; 
         }
+
+        h1 {
+            font-size: 3.2em; /* prominently large heading */
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .description p {
+            margin: 0 auto 25px auto; /* spacing between sentences */
+        }
+
+        p {
+            font-size: 1.6em; /* significantly larger paragraph text */
+            line-height: 1.6em;
+            margin-bottom: 60px;
+            color: #ddd;
+        }
+
         a { 
-            color: #4DA6FF; /* bright blue for links, clearly visible on black */
+            color: #4DA6FF; 
             text-decoration: none; 
         }
+
         a:hover { 
             text-decoration: underline; 
         }
-        .footer { 
-            font-size: 0.9em; 
-            color: #AAA; /* subtle gray footer text */
-            margin-top: 50px; 
+
+        .footer {
+            font-size: 1.2em; /* larger footer */
+            color: #888;
+        }
+
+        @media (max-width: 950px) {
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2.4em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+
+            img {
+                max-width: 160px;
+            }
+
+            .footer {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
-    <img src="logo.png" alt="FoodQ Logo">
-    <h1>Where to Eat? What to Order?</h1>
-    <p>
-        FoodQ is a mobile app that helps users discover, tag, and share favorite restaurants and dishes.
-        Follow friends to see their recommendations, find great food nearby, and always know what to order next.
-    </p>
-
-    <div class="footer">
-        Contact us: <a href="mailto:hello@foodq.com">hello@foodq.com</a>
+    <div class="container">
+        <img src="logo.png" alt="FoodQ Logo">
+        <h1>Where to Eat? What to Order?</h1>
+        <div class="description">
+            <p>FoodQ is a mobile app to organize your favorite restaurants and menu items.</p>
+            <p>Follow friends to see their recommendations and discover what to order next.</p>
+        </div>
+        <div class="footer">
+            Contact us at <a href="mailto:hello@foodq.com">hello@foodq.com</a>
+        </div>
     </div>
 </body>
 </html>
