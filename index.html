@@ -32,7 +32,7 @@
         }
 
         h1 {
-            font-size: 3.0em; 
+            font-size: 3.2em; /* increased slightly for desktop */
             margin-bottom: 20px;
             font-weight: 300;
         }
@@ -66,6 +66,7 @@
             display: none;
         }
 
+        /* Portrait mode unchanged */
         @media (max-width: 768px) and (orientation: portrait) {
             h1 {
                 font-size: 2.2em;
@@ -80,11 +81,11 @@
                 display: inline;
             }
         }
-
-        /* Landscape mode: larger h1 for visual width harmony */
+        
+        /* Landscape mode on iPhone: slightly smaller h1 */
         @media (max-height: 500px) and (orientation: landscape) {
             h1 {
-                font-size: 2.4em; /* adjusted to visually match description width */
+                font-size: 2.2em; /* slightly reduced to match width visually */
                 margin-bottom: 10px;
             }
             p {
