@@ -20,27 +20,27 @@
         }
 
         .container {
-            max-width: 900px; /* wider layout */
+            max-width: 900px;
             padding: 20px;
         }
 
         img { 
-            max-width: 300px; /* significantly larger logo */
+            max-width: 300px;
             margin-bottom: 40px; 
         }
 
         h1 {
-            font-size: 3.2em; /* prominently large heading */
+            font-size: 3.2em; 
             margin-bottom: 30px;
             font-weight: 300;
         }
 
         .description p {
-            margin: 0 auto 25px auto; /* spacing between sentences */
+            margin: 0 auto 25px auto;
         }
 
         p {
-            font-size: 1.6em; /* significantly larger paragraph text */
+            font-size: 1.6em;
             line-height: 1.6em;
             margin-bottom: 60px;
             color: #ddd;
@@ -56,11 +56,17 @@
         }
 
         .footer {
-            font-size: 1.2em; /* larger footer */
+            font-size: 1.2em; 
             color: #888;
         }
 
-        @media (max-width: 950px) {
+        /* Hide mobile-specific breaks by default (desktop) */
+        .mobile-break {
+            display: none;
+        }
+
+        /* Mobile styling and mobile-specific line breaks */
+        @media (max-width: 768px) {
             .container {
                 width: 95%;
                 padding: 10px;
@@ -81,16 +87,32 @@
             .footer {
                 font-size: 1em;
             }
+
+            /* Enable line breaks on mobile only */
+            .mobile-break {
+                display: inline;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="logo.png" alt="FoodQ Logo">
-        <h1>Where to Eat? What to Order?</h1>
+        <h1>
+            Where to Eat?<br class="mobile-break">
+            What to Order?
+        </h1>
         <div class="description">
-            <p>FoodQ helps you organize restaurants and menu items in your life.</p>
-            <p>Discover your new favorite dish through people who matter to you.</p>
+            <p>
+                FoodQ helps you organize<br class="mobile-break">
+                restaurants and menu items<br class="mobile-break">
+                in your life.
+            </p>
+            <p>
+                Discover your new favorite dish<br class="mobile-break">
+                through people who<br class="mobile-break">
+                matter to you.
+            </p>
         </div>
         <div class="footer">
             Contact us at <a href="mailto:hello@foodq.com">hello@foodq.com</a>
