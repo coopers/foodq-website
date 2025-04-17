@@ -60,13 +60,13 @@
             color: #888;
         }
 
-        /* Hide mobile-specific breaks by default (desktop) */
+        /* By default, hide mobile-specific breaks (desktop and landscape) */
         .mobile-break {
             display: none;
         }
 
-        /* Mobile styling and mobile-specific line breaks */
-        @media (max-width: 768px) {
+        /* Mobile styling and mobile-specific line breaks for portrait only */
+        @media (max-width: 768px) and (orientation: portrait) {
             .container {
                 width: 95%;
                 padding: 10px;
@@ -88,7 +88,7 @@
                 font-size: 1em;
             }
 
-            /* Enable line breaks on mobile only */
+            /* Enable breaks only in portrait mode */
             .mobile-break {
                 display: inline;
             }
