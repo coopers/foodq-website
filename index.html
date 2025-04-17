@@ -26,7 +26,7 @@
         }
 
         img { 
-            max-width: 280px; /* Consistent logo size */
+            max-width: 280px; 
             height: auto;
             margin-bottom: 20px; 
         }
@@ -66,7 +66,6 @@
             display: none;
         }
 
-        /* Portrait mode: line breaks enabled */
         @media (max-width: 768px) and (orientation: portrait) {
             h1 {
                 font-size: 2.2em;
@@ -75,17 +74,17 @@
                 font-size: 1.2em;
             }
             img {
-                max-width: 280px; /* consistent logo size */
+                max-width: 280px;
             }
             .mobile-break {
                 display: inline;
             }
         }
 
-        /* Landscape mode: smaller text, no line breaks, same logo size */
+        /* Landscape mode: larger h1 for visual width harmony */
         @media (max-height: 500px) and (orientation: landscape) {
             h1 {
-                font-size: 1.8em; /* adjusted slightly to fit */
+                font-size: 2.4em; /* adjusted to visually match description width */
                 margin-bottom: 10px;
             }
             p {
@@ -93,7 +92,7 @@
                 margin-bottom: 15px;
             }
             img {
-                max-width: 280px; /* consistent logo size */
+                max-width: 280px;
                 margin-bottom: 15px;
             }
             .footer {
