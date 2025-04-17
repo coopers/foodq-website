@@ -11,7 +11,7 @@
             background-color: #000; 
             color: #FFF; 
             margin: 0; 
-            padding: 0 10px; 
+            padding: 10px; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
@@ -21,28 +21,30 @@
 
         .container {
             max-width: 900px;
-            padding: 20px;
+            width: 100%;
+            padding: 10px;
         }
 
         img { 
-            max-width: 300px;
-            margin-bottom: 40px; 
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 20px; 
         }
 
         h1 {
-            font-size: 3.2em; 
-            margin-bottom: 30px;
+            font-size: 3.0em; 
+            margin-bottom: 20px;
             font-weight: 300;
         }
 
         .description p {
-            margin: 0 auto 25px auto;
+            margin: 0 auto 15px auto;
         }
 
         p {
-            font-size: 1.6em;
-            line-height: 1.6em;
-            margin-bottom: 60px;
+            font-size: 1.5em;
+            line-height: 1.4em;
+            margin-bottom: 30px;
             color: #ddd;
         }
 
@@ -56,41 +58,45 @@
         }
 
         .footer {
-            font-size: 1.2em; 
+            font-size: 1.0em; 
             color: #888;
         }
 
-        /* By default, hide mobile-specific breaks (desktop and landscape) */
         .mobile-break {
             display: none;
         }
 
-        /* Mobile styling and mobile-specific line breaks for portrait only */
+        /* Portrait mode: larger font and line breaks enabled */
         @media (max-width: 768px) and (orientation: portrait) {
-            .container {
-                width: 95%;
-                padding: 10px;
-            }
-
             h1 {
-                font-size: 2.4em;
+                font-size: 2.2em;
             }
-
             p {
                 font-size: 1.2em;
             }
-
             img {
-                max-width: 160px;
+                max-width: 150px;
             }
-
-            .footer {
-                font-size: 1em;
-            }
-
-            /* Enable breaks only in portrait mode */
             .mobile-break {
                 display: inline;
+            }
+        }
+
+        /* Landscape mode: smaller font, no line breaks */
+        @media (max-height: 500px) and (orientation: landscape) {
+            h1 {
+                font-size: 1.6em;
+            }
+            p {
+                font-size: 1.0em;
+                margin-bottom: 15px;
+            }
+            img {
+                max-width: 80px;
+                margin-bottom: 10px;
+            }
+            .footer {
+                font-size: 0.8em;
             }
         }
     </style>
